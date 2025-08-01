@@ -1,6 +1,6 @@
-# Naiara Lopes — Developer Portfolio
+# Naiara Costa— Developer Portfolio
 
-Hi! I'm Naiara Lopes, a civil-engineer-turned-developer with a passion for building beautiful, functional web experiences.
+Hi! I'm Naiara Costa, a civil-engineer-turned-developer with a passion for building beautiful, functional web experiences.
 
 This is my personal portfolio built with **Next.js 14**, **Tailwind CSS**, and way too much caffeine. It showcases my projects, skills, and the chaotic journey from blueprint math to JavaScript magic.
 
