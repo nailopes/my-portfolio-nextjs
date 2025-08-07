@@ -1,4 +1,10 @@
 import "./globals.css";
+import { Jura } from "next/font/google";
+
+const jura = Jura({
+  subsets: ["latin"],
+  variable: "--font-jura",
+});
 
 export const metadata = {
   title: "Create Next App",
@@ -7,7 +13,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className={jura.variable}>
       <body className="antialiased font-sans">
         {children}
       </body>
