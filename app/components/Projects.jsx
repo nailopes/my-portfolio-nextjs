@@ -5,12 +5,22 @@ export default function Projects() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
                 <div className="p-6 shadow-lg rounded bg-gray-100">
                     <h3 className="text-xl font-semibold mb-2">Linktree-style Page</h3>
-                    <img src="/linktree.png" alt="Linktree Project" className="rounded mb-4" />
+                    <img src="/linktree.png" alt="Linktree Project" target="_blank" rel="noopener noreferrer" className="rounded mb-4" />
                     <a href="#" className="text-teal-500 underline">View Live</a>
                 </div>
                 <div className="p-6 shadow-lg rounded bg-gray-100">
                     <h3 className="text-xl font-semibold mb-2">This Portfolio</h3>
                     <img src="/portfolio.png" alt="Portfolio Project" className="rounded mb-4" />
+                    <a href="https://nailopes.github.io/my-portfolio/" target="_blank" rel="noopener noreferrer" className="text-teal-500 underline">View Live</a>
+                </div>
+                <div className="p-6 shadow-lg rounded bg-gray-100">
+                    <h3 className="text-xl font-semibold mb-2">This Portfolio</h3>
+                    <img src="/portfolio.png" alt="Portfolio Project" target="_blank" rel="noopener noreferrer" className="rounded mb-4" />
+                    <a href="#" className="text-teal-500 underline">View Live</a>
+                </div>
+                <div className="p-6 shadow-lg rounded bg-gray-100">
+                    <h3 className="text-xl font-semibold mb-2">This Portfolio</h3>
+                    <img src="/portfolio.png" alt="Portfolio Project" target="_blank" rel="noopener noreferrer" className="rounded mb-4" />
                     <a href="#" className="text-teal-500 underline">View Live</a>
                 </div>
             </div>
