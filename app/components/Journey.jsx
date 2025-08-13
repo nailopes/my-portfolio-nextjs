@@ -173,12 +173,12 @@ export default function Journey() {
                         <p className="text-gray-600 mb-6">
                             I'm excited to bring my skills and passion to new challenges and opportunities.
                         </p>
-                        <a
+                        {/* <a
                             href="mailto:naiaramirandacosta@gmail.com?subject=Let's Connect - Portfolio Inquiry&body=Hi! I found your portfolio and would love to connect with you."
                             className="inline-block bg-teal-500 hover:bg-teal-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-200 shadow-lg hover:shadow-xl"
                         >
                             Let's Connect
-                        </a>
+                        </a> */}
                     </div>
                 </div>
             </div>
