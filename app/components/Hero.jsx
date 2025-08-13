@@ -7,7 +7,7 @@ export default function Hero() {
             </p>
             <a
                 href="#projects"
-                className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg text-lg"
+                className="inline-block bg-pink-500 hover:bg-pink-600 text-white font-bold py-3 px-6 rounded-lg text-lg"
             >
                 View My Work
             </a>
