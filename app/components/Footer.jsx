@@ -94,7 +94,11 @@ export default function Footer() {
                             <span>using Next.js & Tailwind CSS</span>
                         </div>
 
+
                         <div className="flex items-center space-x-6 text-sm text-gray-400 md:ml-6">
+                            <div >
+                                <span>|</span>
+                            </div>
                             <a
                                 href="/privacy-policy"
                                 target='_blank'
@@ -103,6 +107,9 @@ export default function Footer() {
                             >
                                 Privacy Policy
                             </a>
+                            <div >
+                                <span>|</span>
+                            </div>
                             <a
                                 href="/terms-of-use"
                                 target='_blank'
