@@ -97,7 +97,7 @@ export default function Footer() {
 
                         <div className="flex items-center space-x-6 text-sm text-gray-400 md:ml-6">
                             <div >
-                                <span>|</span>
+                                <p>|</p>
                             </div>
                             <a
                                 href="/privacy-policy"
@@ -108,7 +108,7 @@ export default function Footer() {
                                 Privacy Policy
                             </a>
                             <div >
-                                <span>|</span>
+                                <p>|</p>
                             </div>
                             <a
                                 href="/terms-of-use"
