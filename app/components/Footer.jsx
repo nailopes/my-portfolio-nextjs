@@ -96,9 +96,6 @@ export default function Footer() {
 
 
                         <div className="flex items-center space-x-6 text-sm text-gray-400 md:ml-6">
-                            <div >
-                                <p>|</p>
-                            </div>
                             <a
                                 href="/privacy-policy"
                                 target='_blank'
