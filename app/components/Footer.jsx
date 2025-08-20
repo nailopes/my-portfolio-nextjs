@@ -87,33 +87,27 @@ export default function Footer() {
 
                 {/* Bottom section */}
                 <div className="border-t border-gray-700 mt-12 pt-8">
-                    <div className="flex flex-col md:flex-row justify-center items-center">
-                        <div className="flex items-center space-x-1 text-sm text-gray-400 mb-4 md:mb-0">
-                            <span>&copy; {currentYear}Crafted by Naiara Costa. Made with</span>
+                    <div className="flex flex-col items-center space-y-4">
+                        <div className="flex items-center space-x-1 text-sm text-gray-400">
+                            <span>&copy; {currentYear} Crafted by Naiara Costa. Made with</span>
                             <Heart className="w-4 h-4 text-red-500 animate-pulse" />
                             <span>using Next.js & Tailwind CSS</span>
                         </div>
 
-
-                        <div className="flex items-center space-x-6 text-sm text-gray-400 md:ml-6">
-                            <div >
-                                <p>|</p>
-                            </div>
+                        <div className="flex items-center space-x-6 text-sm text-gray-400">
                             <a
                                 href="/privacy-policy"
-                                target='_blank'
-                                rel='noopener noreferrer'
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="hover:text-teal-400 transition-colors duration-200"
                             >
                                 Privacy Policy
                             </a>
-                            <div >
-                                <p>|</p>
-                            </div>
+                            <span>|</span>
                             <a
                                 href="/terms-of-use"
-                                target='_blank'
-                                rel='noopener noreferrer '
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="hover:text-teal-400 transition-colors duration-200"
                             >
                                 Terms of Use
