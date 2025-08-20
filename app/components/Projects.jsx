@@ -13,7 +13,7 @@ export default function Projects() {
             title: "Linktree-style Page",
             image: "/linktree.png",
             alt: "Linktree-style web page interface showing several rounded buttons with social media icons and links, set against a clean white background. The layout is simple and inviting.",
-            link: "#",
+            link: "https://nailopes.github.io/linktree-example/",
             description: "A clean, modern link aggregation page with social media integration and responsive design."
         },
         {
@@ -193,8 +193,8 @@ export default function Projects() {
                                 key={index}
                                 onClick={() => goToSlide(index)}
                                 className={`w-3 h-3 rounded-full transition-all duration-300 ${currentIndex === index
-                                        ? 'bg-teal-600 scale-125'
-                                        : 'bg-gray-300 hover:bg-gray-400'
+                                    ? 'bg-teal-600 scale-125'
+                                    : 'bg-gray-300 hover:bg-gray-400'
                                     }`}
                                 aria-label={`Go to slide ${index + 1}`}
                             />
