@@ -17,18 +17,18 @@ export default function Projects() {
             description: "A clean, modern link aggregation page with social media integration and responsive design."
         },
         {
-            title: "Portfolio Website",
+            title: "My first Portfolio Website",
             image: "/portfolio.png",
             alt: "Personal portfolio homepage featuring a centered profile photo, bold heading with the name Nai Lopes, and navigation links for About, Projects, and Contact. The design is modern and welcoming.",
             link: "https://nailopes.github.io/my-portfolio/",
-            description: "A responsive portfolio showcasing web development projects with modern UI/UX design."
+            description: "My first portfolio website showcasing my skills and projects, built with pure HTML and CSS to demonstrate my foundational web development skills."
         },
         {
             title: "E-commerce Platform",
-            image: "/portfolio.png",
+            image: "/choripan.png",
             alt: "E-commerce website interface with product grid, shopping cart functionality, and clean checkout process.",
-            link: "#",
-            description: "Full-stack e-commerce solution with payment integration and inventory management."
+            link: "https://choripan.ca",
+            description: "Full-stack e-commerce solution with contact integration and product features, built with Next.js and Tailwind CSS."
         },
         {
             title: "Task Management App",
@@ -153,7 +153,7 @@ export default function Projects() {
                                             <p className="text-gray-600 mb-4 line-clamp-3">
                                                 {project.description}
                                             </p>
-                                            <a
+                                            {/* <a
                                                 href={project.link}
                                                 target={project.link.startsWith('http') ? '_blank' : '_self'}
                                                 rel={project.link.startsWith('http') ? 'noopener noreferrer' : ''}
@@ -161,7 +161,7 @@ export default function Projects() {
                                             >
                                                 Learn More
                                                 <ExternalLink size={16} className="ml-1" />
-                                            </a>
+                                            </a> */}
                                         </div>
                                     </div>
                                 </div>

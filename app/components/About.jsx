@@ -12,7 +12,7 @@ export default function About() {
             />
             <div className="max-w-md lg:max-w-lg xl:max-w-xl text-center md:text-left">
                 <h2 className="text-3xl lg:text-4xl xl:text-5xl font-bold mb-4">ABOUT ME</h2>
-                <p className="mb-2 text-lg lg:text-xl">Hi! I'm Naiara Costa,</p>
+                <p className="mb-2 text-lg lg:text-xl">Building software with structure and vision</p>
                 <p className="text-teal-500 font-semibold mb-2 text-lg lg:text-xl hover:text-teal-600 hover:shadow-lg hover:rounded-lg">Full Stack Developer</p>
                 <p className="text-lg lg:text-xl">Civil Engineer</p>
                 <p className="mb-4 text-lg lg:text-xl">Project Manager</p>

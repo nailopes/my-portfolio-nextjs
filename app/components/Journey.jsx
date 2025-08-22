@@ -2,72 +2,193 @@
 
 import Link from "next/link";
 import { useState } from 'react';
-import { Calendar, MapPin, Award, Code, GraduationCap, Briefcase } from 'lucide-react';
+import { Calendar, MapPin, Award, Code, GraduationCap, Briefcase, Globe, Lightbulb, Trophy } from 'lucide-react';
 
 export default function Journey() {
     const [activeItem, setActiveItem] = useState(0);
 
     const journeyData = [
+
         {
             id: 1,
-            title: "InceptionU - Full Stack Developer Program",
+            title: "Personal & Side Projects",
+            company: "Independent",
+            role: "Full Stack Developer",
+            period: "2025",
+            location: "Calgary, AB",
+            type: "achievement",
+            icon: Code,
+            description:
+                "Developed and shipped multiple independent projects, including my personal portfolio and side apps such as Choripán. These projects allowed me to apply modern web technologies, explore new tools, and stay active while continuously learning and delivering value.",
+            skills: [
+                "Next.js/React",
+                "Tailwind CSS",
+                "Node.js",
+                "Agile Practices",
+                "Accessibility",
+                "Performance Optimization"
+            ],
+            color: "pink",
+        },
+
+        {
+            id: 2,
+            title: "Capstone Project – Full Stack App",
             company: "InceptionU",
-            role: "Full Stack Developer Student",
-            period: "2024",
+            role: "Full Stack Developer",
+            period: "2025",
+            location: "Calgary, AB",
+            type: "achievement",
+            icon: Trophy,
+            description:
+                "End-to-end product delivered in a cross-functional team: scoped requirements, designed UX, built API & UI, wrote docs, and presented a live demo.",
+            skills: ["Requirements", "UI/UX", "React", "Node.js", "REST APIs", "Teamwork"],
+            color: "fuchsia",
+        },
+
+        {
+            id: 3,
+            title: "InceptionU – Full Stack Developer Program",
+            company: "InceptionU",
+            role: "Full Stack Developer (Student)",
+            period: "2024–2025",
             location: "Calgary, AB",
             type: "education",
             icon: GraduationCap,
-            description: "I gained hands-on experience with key web development technologies like HTML, CSS, JavaScript, React, Node.js, MongoDB, and JSON. Throughout the course, I worked on real projects that challenged me to apply these skills in practical scenarios.",
-            skills: ["HTML", "CSS", "JavaScript", "React", "Node.js", "MongoDB", "JSON"],
-            color: "teal"
+            description:
+                "Intensive, project-based program focused on modern web development and team delivery. Built real-world apps emphasizing collaboration, problem-solving, and user-centric design.",
+            skills: [
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "React",
+                "Node.js",
+                "Express",
+                "MongoDB",
+                "Git/GitHub",
+                "Agile"
+            ],
+            color: "purple",
         },
+
         {
-            id: 2,
-            title: "Previous Experience",
-            company: "Your Company",
-            role: "Your Previous Role",
-            period: "2023",
-            location: "Your Location",
-            type: "work",
-            icon: Briefcase,
-            description: "Add your previous work experience here. Describe your responsibilities, achievements, and the skills you developed.",
-            skills: ["Skill 1", "Skill 2", "Skill 3"],
-            color: "blue"
+            id: 4,
+            title: "ComIT – Web Development Foundations",
+            company: "ComIT",
+            role: "Web Development Trainee",
+            period: "2020",
+            location: "Calgary, AB (remote/hybrid)",
+            type: "education",
+            icon: GraduationCap,
+            description:
+                "Learned core front-end skills and foundations of app development. Practice-based learning with small projects and code reviews.",
+            skills: ["HTML", "CSS", "JavaScript", "React", "Responsive Design", "Git"],
+            color: "violet",
         },
+
         {
-            id: 3,
-            title: "Another Milestone",
-            company: "Another Company/Institution",
-            role: "Your Role",
-            period: "2022",
-            location: "Location",
+            id: 5,
+            title: "Career Transition to IT",
+            company: "Self-initiated",
+            role: "Learner & Explorer",
+            period: "2019",
+            location: "Calgary, AB",
             type: "achievement",
-            icon: Award,
-            description: "Add another significant milestone in your journey. This could be a certification, project, or career achievement.",
-            skills: ["Skill A", "Skill B", "Skill C"],
-            color: "purple"
-        }
+            icon: Lightbulb,
+            description:
+                "After moving to Calgary, I decided to pursue a career in IT. Inspired by my problem-solving background in engineering and project management, and motivated by Calgary’s growing tech ecosystem, I began exploring programming and enrolled in training programs to build a solid foundation in software development.",
+            skills: ["Problem Solving", "Adaptability", "Continuous Learning"],
+            color: "indigo",
+        },
+
+        {
+            id: 6,
+            title: "Transition to Canada",
+            company: "Various Roles",
+            role: "Sales Associate & Cashier",
+            period: "2016–2019",
+            location: "Calgary, AB",
+            type: "work",
+            icon: Globe,
+            description:
+                "Moved to Canada and immersed myself in a new culture while studying English. Worked in customer-facing roles as a Sales Associate and Cashier, gaining Canadian work experience and improving communication skills in a professional environment.",
+            skills: ["Customer Service", "Communication", "Adaptability", "Teamwork", "English Language Proficiency"],
+            color: "blue",
+        },
+
+        {
+            id: 7,
+            title: "B.Sc. in Civil Engineering",
+            company: "Universidade FUMEC",
+            role: "Civil Engineering Graduate",
+            period: "2011–2016",
+            location: "Belo Horizonte, Brazil",
+            type: "education",
+            icon: GraduationCap,
+            description:
+                "Engineering background and project management fundamentals: planning, delivery, stakeholder communication, and structured problem-solving—skills now applied to software.",
+            skills: ["Project Management", "Planning & Scheduling", "Stakeholder Communication"],
+            color: "sky",
+        },
+
+
     ];
 
     const getColorClasses = (color) => {
         const colors = {
-            teal: {
-                bg: "bg-teal-500",
-                text: "text-teal-600",
-                border: "border-teal-200",
-                hover: "hover:bg-teal-50"
+            pink: {
+                bg: "bg-pink-400",
+                text: "text-pink-500",
+                border: "border-pink-200",
+                hover: "hover:bg-pink-00 hover:text-white"
             },
-            blue: {
-                bg: "bg-blue-500",
-                text: "text-blue-600",
-                border: "border-blue-200",
-                hover: "hover:bg-blue-50"
+            fuchsia: {
+                bg: "bg-fuchsia-400",
+                text: "text-fuchsia-500",
+                border: "border-fuchsia-200",
+                hover: "hover:bg-fuchsia-00 hover:text-white"
             },
             purple: {
-                bg: "bg-purple-500",
-                text: "text-purple-600",
+                bg: "bg-purple-400",
+                text: "text-purple-500",
                 border: "border-purple-200",
-                hover: "hover:bg-purple-50"
+                hover: "hover:bg-purple-00 hover:text-white"
+            },
+            violet: {
+                bg: "bg-violet-400",
+                text: "text-violet-500",
+                border: "border-violet-200",
+                hover: "hover:bg-violet-00 hover:text-white"
+            },
+            indigo: {
+                bg: "bg-indigo-400",
+                text: "text-indigo-500",
+                border: "border-indigo-200",
+                hover: "hover:bg-indigo-00 hover:text-white"
+            },
+            blue: {
+                bg: "bg-blue-400",
+                text: "text-blue-500",
+                border: "border-blue-200",
+                hover: "hover:bg-blue-00 hover:text-white"
+            },
+            sky: {
+                bg: "bg-sky-400",
+                text: "text-sky-500",
+                border: "border-sky-200",
+                hover: "hover:bg-sky-00 hover:text-white"
+            },
+            emerald: {
+                bg: "bg-emerald-400",
+                text: "text-emerald-500",
+                border: "border-emerald-200",
+                hover: "hover:bg-emerald-00 hover:text-white"
+            },
+            teal: {
+                bg: "bg-teal-400",
+                text: "text-teal-500",
+                border: "border-teal-200",
+                hover: "hover:bg-teal-00 hover:text-white"
             }
         };
         return colors[color] || colors.teal;
