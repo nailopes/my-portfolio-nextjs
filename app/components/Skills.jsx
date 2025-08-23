@@ -1,14 +1,185 @@
-export default function Skills() {
-    return (
-        <section>
-            <h2 className="text-3xl font-bold mb-6 text-center">Skills</h2>
-            <ul className="grid grid-cols-2 md:grid-cols-3 gap-4 text-center">
-                {["JavaScript", "React", "Node.js", "Python", "Git", "Tailwind CSS"].map((skill) => (
-                    <li key={skill} className="bg-gray-800 py-3 rounded-lg">
-                        {skill}
-                    </li>
+'use client';
+
+import { useState } from "react";
+import { Wrench, Heart, Code, Server, Database, GitBranch, Users, Target, Lightbulb, Clock, MessageCircle, TrendingUp } from "lucide-react";
+
+const Skills = () => {
+    const [activeTab, setActiveTab] = useState("hard");
+
+    const hardSkills = [
+        {
+            category: "Front-End Development",
+            icon: <Code className="w-5 h-5" />,
+            skills: ["React", "Next.js", "JavaScript (ES6+)", "HTML5", "CSS3", "Responsive Web Design", "Accessibility Best Practices", "Figma", "Canva"],
+            color: "from-blue-500 to-cyan-500"
+        },
+        {
+            category: "Back-End Development",
+            icon: <Server className="w-5 h-5" />,
+            skills: ["Node.js", "Express.js"],
+            color: "from-green-500 to-emerald-500"
+        },
+        {
+            category: "Databases",
+            icon: <Database className="w-5 h-5" />,
+            skills: ["MongoDB", "Firebase"],
+            color: "from-purple-500 to-violet-500"
+        },
+        {
+            category: "APIs",
+            icon: <GitBranch className="w-5 h-5" />,
+            skills: ["RESTful APIs", "Third-Party API Integration"],
+            color: "from-orange-500 to-red-500"
+        },
+        {
+            category: "Version Control & Tools",
+            icon: <GitBranch className="w-5 h-5" />,
+            skills: ["Git", "GitHub"],
+            color: "from-gray-600 to-gray-800"
+        },
+        {
+            category: "Agile Methodologies",
+            icon: <Target className="w-5 h-5" />,
+            skills: ["Scrum", "Kanban"],
+            color: "from-indigo-500 to-blue-500"
+        }
+    ];
+
+    const softSkills = [
+        {
+            category: "Problem-Solving & Analysis",
+            icon: <Lightbulb className="w-5 h-5" />,
+            skills: ["Problem-Solving & Critical Thinking", "UX/User-Centric Mindset"],
+            color: "from-yellow-500 to-orange-500"
+        },
+        {
+            category: "Communication & Collaboration",
+            icon: <MessageCircle className="w-5 h-5" />,
+            skills: ["Collaboration & Communication", "Customer Service & Client-Facing Communication"],
+            color: "from-pink-500 to-rose-500"
+        },
+        {
+            category: "Leadership & Management",
+            icon: <Users className="w-5 h-5" />,
+            skills: ["Leadership & Strategic Planning", "Project Management (civil & software)"],
+            color: "from-teal-500 to-cyan-500"
+        },
+        {
+            category: "Personal Development",
+            icon: <TrendingUp className="w-5 h-5" />,
+            skills: ["Adaptability & Continuous Learning", "Resilience & Initiative (immigration, career transition)"],
+            color: "from-emerald-500 to-green-500"
+        },
+        {
+            category: "Organization & Efficiency",
+            icon: <Clock className="w-5 h-5" />,
+            skills: ["Time Management & Organization"],
+            color: "from-violet-500 to-purple-500"
+        }
+    ];
+
+    const SkillCard = ({ category, icon, skills, color }) => (
+        <div className="group relative bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+            {/* Gradient background overlay */}
+            <div className={`absolute inset-0 bg-gradient-to-br ${color} opacity-0 group-hover:opacity-5 rounded-2xl transition-opacity duration-300`}></div>
+
+            {/* Header */}
+            <div className="flex items-center space-x-3 mb-4">
+                <div className={`p-2 rounded-lg bg-gradient-to-r ${color} text-white`}>
+                    {icon}
+                </div>
+                <h3 className="font-semibold text-gray-800 text-lg">{category}</h3>
+            </div>
+
+            {/* Skills */}
+            <div className="space-y-2">
+                {skills.map((skill, index) => (
+                    <div
+                        key={index}
+                        className="flex items-center space-x-2 py-2 px-3 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors duration-200"
+                    >
+                        <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${color}`}></div>
+                        <span className="text-gray-700 text-sm font-medium">{skill}</span>
+                    </div>
                 ))}
-            </ul>
+            </div>
+        </div>
+    );
+
+    return (
+        <section className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 py-16 px-4">
+            <div className="max-w-7xl mx-auto">
+                {/* Header */}
+                <div className="text-center mb-12">
+                    <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+                        Skills & Expertise
+                    </h2>
+                    <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                        A comprehensive overview of my technical abilities and professional competencies
+                    </p>
+                </div>
+
+                {/* Tab Navigation */}
+                <div className="flex justify-center mb-12">
+                    <div className="bg-white rounded-2xl p-2 shadow-lg border border-gray-200">
+                        <button
+                            onClick={() => setActiveTab("hard")}
+                            className={`flex items-center space-x-2 px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${activeTab === "hard"
+                                ? "bg-gradient-to-r from-blue-500 to-cyan-500 text-white shadow-lg"
+                                : "text-gray-600 hover:text-gray-800"
+                                }`}
+                        >
+                            <Wrench className="w-5 h-5" />
+                            <span>Hard Skills</span>
+                        </button>
+                        <button
+                            onClick={() => setActiveTab("soft")}
+                            className={`flex items-center space-x-2 px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${activeTab === "soft"
+                                ? "bg-gradient-to-r from-pink-500 to-rose-500 text-white shadow-lg"
+                                : "text-gray-600 hover:text-gray-800"
+                                }`}
+                        >
+                            <Heart className="w-5 h-5" />
+                            <span>Soft Skills</span>
+                        </button>
+                    </div>
+                </div>
+
+                {/* Skills Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {activeTab === "hard"
+                        ? hardSkills.map((skillGroup, index) => (
+                            <SkillCard key={index} {...skillGroup} />
+                        ))
+                        : softSkills.map((skillGroup, index) => (
+                            <SkillCard key={index} {...skillGroup} />
+                        ))}
+                </div>
+
+                {/* Stats Footer */}
+                <div className="mt-16 bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                        <div>
+                            <div className="text-3xl font-bold text-blue-600 mb-2">{hardSkills.reduce((acc, group) => acc + group.skills.length, 0)}</div>
+                            <div className="text-gray-600 font-medium">Technical Skills</div>
+                        </div>
+                        <div>
+                            <div className="text-3xl font-bold text-pink-600 mb-2">{softSkills.reduce((acc, group) => acc + group.skills.length, 0)}</div>
+                            <div className="text-gray-600 font-medium">Soft Skills</div>
+                        </div>
+                        <div>
+                            <div className="text-3xl font-bold text-green-600 mb-2">{hardSkills.length}</div>
+                            <div className="text-gray-600 font-medium">Tech Categories</div>
+                        </div>
+                        <div>
+                            <div className="text-3xl font-bold text-purple-600 mb-2">{softSkills.length}</div>
+                            <div className="text-gray-600 font-medium">Professional Areas</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     );
-}
+};
+
+export default Skills;

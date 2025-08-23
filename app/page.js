@@ -5,6 +5,7 @@ import Journey from './components/Journey';
 import Contact from './components/Contact';
 import Hero from './components/Hero';
 import Footer from './components/Footer';
+import Skills from './components/Skills';
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <About />
       <Hero />
       <Projects />
+      <Skills />
       <Journey />
       <Footer />
     </main>
