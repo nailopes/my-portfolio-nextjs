@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from "react";
-import { Wrench, Heart, Code, Server, Database, GitBranch, Users, Target, Lightbulb, Clock, MessageCircle, TrendingUp } from "lucide-react";
+import { Wrench, Heart, Code, Server, Database, GitBranch, Users, Target, Lightbulb, Clock, MessageCircle, TrendingUp, Globe } from "lucide-react";
 
 const Skills = () => {
     const [activeTab, setActiveTab] = useState("hard");
@@ -11,31 +11,31 @@ const Skills = () => {
             category: "Front-End Development",
             icon: <Code className="w-5 h-5" />,
             skills: ["React", "Next.js", "JavaScript (ES6+)", "HTML5", "CSS3", "Responsive Web Design", "Accessibility Best Practices", "Figma", "Canva"],
-            color: "from-blue-500 to-cyan-500"
+            color: "from-rose-500 to-pink-500"
         },
         {
             category: "Back-End Development",
             icon: <Server className="w-5 h-5" />,
             skills: ["Node.js", "Express.js"],
-            color: "from-green-500 to-emerald-500"
+            color: "from-pink-500 to-fuchsia-500"
         },
         {
             category: "Databases",
             icon: <Database className="w-5 h-5" />,
             skills: ["MongoDB", "Firebase"],
-            color: "from-purple-500 to-violet-500"
+            color: "from-fuchsia-500 to-purple-500"
         },
         {
             category: "APIs",
             icon: <GitBranch className="w-5 h-5" />,
             skills: ["RESTful APIs", "Third-Party API Integration"],
-            color: "from-orange-500 to-red-500"
+            color: "from-purple-500 to-violet-500"
         },
         {
             category: "Version Control & Tools",
             icon: <GitBranch className="w-5 h-5" />,
             skills: ["Git", "GitHub"],
-            color: "from-gray-600 to-gray-800"
+            color: "from-violet-600 to-indigo-800"
         },
         {
             category: "Agile Methodologies",
@@ -49,32 +49,38 @@ const Skills = () => {
         {
             category: "Problem-Solving & Analysis",
             icon: <Lightbulb className="w-5 h-5" />,
-            skills: ["Problem-Solving & Critical Thinking", "UX/User-Centric Mindset"],
-            color: "from-yellow-500 to-orange-500"
+            skills: ["Problem-Solving", "Critical Thinking", "UX/User-Centric Mindset"],
+            color: "from-rose-500 to-pink-500"
         },
         {
             category: "Communication & Collaboration",
             icon: <MessageCircle className="w-5 h-5" />,
-            skills: ["Collaboration & Communication", "Customer Service & Client-Facing Communication"],
-            color: "from-pink-500 to-rose-500"
+            skills: ["Collaboration", "Communication", "Customer Service", "Teamwork"],
+            color: "from-pink-500 to-fuchsia-500"
         },
         {
             category: "Leadership & Management",
             icon: <Users className="w-5 h-5" />,
-            skills: ["Leadership & Strategic Planning", "Project Management (civil & software)"],
-            color: "from-teal-500 to-cyan-500"
+            skills: ["Leadership", "Strategic Planning", "Project Management (civil & software)"],
+            color: "from-fuchsia-500 to-purple-500"
         },
         {
             category: "Personal Development",
             icon: <TrendingUp className="w-5 h-5" />,
-            skills: ["Adaptability & Continuous Learning", "Resilience & Initiative (immigration, career transition)"],
-            color: "from-emerald-500 to-green-500"
+            skills: ["Adaptability", "Continuous Learning", "Resilience", "Initiative"],
+            color: "from-purple-500 to-violet-500"
         },
         {
             category: "Organization & Efficiency",
             icon: <Clock className="w-5 h-5" />,
-            skills: ["Time Management & Organization"],
-            color: "from-violet-500 to-purple-500"
+            skills: ["Time Management", "Organization"],
+            color: "from-violet-500 to-indigo-500"
+        },
+        {
+            category: "Cross-Cultural Competency",
+            icon: <Globe className="w-5 h-5" />,
+            skills: ["Cross-Cultural Communication", "Cultural Adaptability", "Multicultural Team Collaboration"],
+            color: "from-indigo-600 to-blue-600"
         }
     ];
 
@@ -107,7 +113,7 @@ const Skills = () => {
     );
 
     return (
-        <section className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 py-16 px-4">
+        <section className="min-h-screen bg-white from-slate-50 via-blue-50 to-indigo-50 py-16 px-4">
             <div className="max-w-7xl mx-auto">
                 {/* Header */}
                 <div className="text-center mb-12">
@@ -125,7 +131,7 @@ const Skills = () => {
                         <button
                             onClick={() => setActiveTab("hard")}
                             className={`flex items-center space-x-2 px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${activeTab === "hard"
-                                ? "bg-gradient-to-r from-blue-500 to-cyan-500 text-white shadow-lg"
+                                ? "bg-gradient-to-r bg-teal-500 text-white shadow-lg"
                                 : "text-gray-600 hover:text-gray-800"
                                 }`}
                         >
@@ -135,7 +141,7 @@ const Skills = () => {
                         <button
                             onClick={() => setActiveTab("soft")}
                             className={`flex items-center space-x-2 px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${activeTab === "soft"
-                                ? "bg-gradient-to-r from-pink-500 to-rose-500 text-white shadow-lg"
+                                ? "bg-gradient-to-r bg-pink-500 text-white shadow-lg"
                                 : "text-gray-600 hover:text-gray-800"
                                 }`}
                         >
