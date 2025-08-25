@@ -19,7 +19,7 @@ export default function Journey() {
             type: "achievement",
             icon: Code,
             description:
-                "Developed and shipped multiple independent projects, including my personal portfolio and side apps such as Choripán. These projects allowed me to apply modern web technologies, explore new tools, and stay active while continuously learning and delivering value.",
+                "Developed and shipped multiple independent projects, including my personal portfolio and side apps such as Choripan. These projects allowed me to apply modern web technologies, explore new tools, and stay active while continuously learning and delivering value.",
             skills: [
                 "Next.js/React",
                 "Tailwind CSS",
@@ -77,7 +77,7 @@ export default function Journey() {
             company: "ComIT",
             role: "Web Development Trainee",
             period: "2020",
-            location: "Calgary, AB (remote/hybrid)",
+            location: "Calgary, AB (hybrid)",
             type: "education",
             icon: GraduationCap,
             description:
@@ -107,7 +107,7 @@ export default function Journey() {
             company: "Various Roles",
             role: "Sales Associate & Cashier",
             period: "2016–2019",
-            location: "Calgary, AB",
+            location: "Winnipeg, MB",
             type: "work",
             icon: Globe,
             description:

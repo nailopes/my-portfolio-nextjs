@@ -5,7 +5,6 @@ import { ChevronLeft, ChevronRight, ExternalLink } from 'lucide-react';
 
 export default function Projects() {
     const [currentIndex, setCurrentIndex] = useState(0);
-    const [isAutoPlay, setIsAutoPlay] = useState(true);
     const [slidesToShow, setSlidesToShow] = useState(1);
 
     const projects = [
@@ -40,7 +39,6 @@ export default function Projects() {
     ];
 
     const totalSlides = projects.length;
-    const maxIndex = Math.max(0, totalSlides - slidesToShow);
 
     // Handle responsive behavior
     useEffect(() => {
@@ -79,17 +77,11 @@ export default function Projects() {
         setCurrentIndex(Math.min(index, currentMaxIndex));
     };
 
-    // Auto-play functionality
+    // Auto-play functionality - always active
     useEffect(() => {
-        if (!isAutoPlay) return;
-
         const interval = setInterval(nextSlide, 4000);
         return () => clearInterval(interval);
-    }, [isAutoPlay, currentIndex, slidesToShow]);
-
-    // Handle mouse enter/leave for auto-play
-    const handleMouseEnter = () => setIsAutoPlay(false);
-    const handleMouseLeave = () => setIsAutoPlay(true);
+    }, [currentIndex, slidesToShow]);
 
     return (
         <section id="projects" className="py-20 px-6 bg-gradient-to-br from-gray-50 to-white">
@@ -103,11 +95,7 @@ export default function Projects() {
                     </p>
                 </div>
 
-                <div
-                    className="relative"
-                    onMouseEnter={handleMouseEnter}
-                    onMouseLeave={handleMouseLeave}
-                >
+                <div className="relative">
                     {/* Carousel Container */}
                     <div className="overflow-hidden rounded-2xl">
                         <div
@@ -121,7 +109,7 @@ export default function Projects() {
                                     key={index}
                                     className="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-3"
                                 >
-                                    <div className="group bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden h-full">
+                                    <div className="group bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden">
                                         {/* Image Container */}
                                         <div className="relative overflow-hidden">
                                             <img
@@ -150,18 +138,9 @@ export default function Projects() {
                                             <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-teal-600 transition-colors duration-200">
                                                 {project.title}
                                             </h3>
-                                            <p className="text-gray-600 mb-4 line-clamp-3">
+                                            <p className="text-gray-600 line-clamp-3">
                                                 {project.description}
                                             </p>
-                                            {/* <a
-                                                href={project.link}
-                                                target={project.link.startsWith('http') ? '_blank' : '_self'}
-                                                rel={project.link.startsWith('http') ? 'noopener noreferrer' : ''}
-                                                className="inline-flex items-center text-teal-600 hover:text-teal-700 font-semibold transition-colors duration-200"
-                                            >
-                                                Learn More
-                                                <ExternalLink size={16} className="ml-1" />
-                                            </a> */}
                                         </div>
                                     </div>
                                 </div>
@@ -200,26 +179,6 @@ export default function Projects() {
                             />
                         ))}
                     </div>
-
-                    {/* Progress Bar */}
-                    <div className="w-full bg-gray-200 rounded-full h-1 mt-6">
-                        <div
-                            className="bg-gradient-to-r from-teal-500 to-teal-600 h-1 rounded-full transition-all duration-300"
-                            style={{
-                                width: `${((currentIndex + 1) / (Math.max(0, totalSlides - slidesToShow) + 1)) * 100}%`
-                            }}
-                        />
-                    </div>
-                </div>
-
-                {/* Auto-play indicator */}
-                <div className="text-center mt-6">
-                    <button
-                        onClick={() => setIsAutoPlay(!isAutoPlay)}
-                        className="text-sm text-gray-500 hover:text-gray-700 transition-colors duration-200"
-                    >
-                        {isAutoPlay ? '⏸️ Pause Auto-play' : '▶️ Resume Auto-play'}
-                    </button>
                 </div>
             </div>
         </section>

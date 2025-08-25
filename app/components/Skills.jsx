@@ -8,41 +8,48 @@ const Skills = () => {
 
     const hardSkills = [
         {
-            category: "Front-End Development",
+            category: "Core Front-End",
             icon: <Code className="w-5 h-5" />,
-            skills: ["React", "Next.js", "JavaScript (ES6+)", "HTML5", "CSS3", "Responsive Web Design", "Accessibility Best Practices", "Figma", "Canva"],
-            color: "from-rose-500 to-pink-500"
+            skills: [
+                "HTML5",
+                "CSS3",
+                "JavaScript (ES6+)",
+                "Responsive Web Design",
+                "Accessibility Best Practices",
+            ],
+            color: "from-rose-500 to-pink-500",
+        },
+        {
+            category: "Frameworks & UI",
+            icon: <Heart className="w-5 h-5" />,
+            skills: ["React", "Next.js", "Figma", "Canva"],
+            color: "from-pink-500 to-fuchsia-500",
         },
         {
             category: "Back-End Development",
             icon: <Server className="w-5 h-5" />,
             skills: ["Node.js", "Express.js"],
-            color: "from-pink-500 to-fuchsia-500"
-        },
-        {
-            category: "Databases",
-            icon: <Database className="w-5 h-5" />,
-            skills: ["MongoDB", "Firebase"],
             color: "from-fuchsia-500 to-purple-500"
         },
+
         {
-            category: "APIs",
-            icon: <GitBranch className="w-5 h-5" />,
-            skills: ["RESTful APIs", "Third-Party API Integration"],
-            color: "from-purple-500 to-violet-500"
+            category: "Data & APIs",
+            icon: <Database className="w-5 h-5" />,
+            skills: ["MongoDB", "Firebase", "RESTful APIs", "Third-Party API Integration"],
+            color: "from-purple-500 to-violet-500",
         },
         {
             category: "Version Control & Tools",
             icon: <GitBranch className="w-5 h-5" />,
             skills: ["Git", "GitHub"],
-            color: "from-violet-600 to-indigo-800"
+            color: "from-violet-600 to-indigo-800",
         },
         {
             category: "Agile Methodologies",
             icon: <Target className="w-5 h-5" />,
             skills: ["Scrum", "Kanban"],
-            color: "from-indigo-500 to-blue-500"
-        }
+            color: "from-indigo-500 to-blue-500",
+        },
     ];
 
     const softSkills = [
