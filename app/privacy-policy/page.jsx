@@ -12,7 +12,7 @@ export default function PrivacyPolicyPage() {
         <main className="mx-auto max-w-3xl px-6 py-16">
             <header className="mb-8">
                 <h1 className="text-3xl font-bold tracking-tight">Privacy Policy</h1>
-                <p className="text-sm text-gray-500">Last updated: {lastUpdated}</p>
+                <p className="text-sm text-gray-500 dark:text-white">Last updated: {lastUpdated}</p>
             </header>
 
             <section className="prose prose-neutral dark:prose-invert">
