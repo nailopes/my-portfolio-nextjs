@@ -84,13 +84,13 @@ export default function Projects() {
     }, [currentIndex, slidesToShow]);
 
     return (
-        <section id="projects" className="py-20 px-6 bg-gradient-to-br from-gray-50 to-white">
+        <section id="projects" className="py-20 px-6 bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-800">
             <div className="max-w-7xl mx-auto">
                 <div className="text-center mb-16">
-                    <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-gray-100 mb-4">
                         Featured Projects
                     </h2>
-                    <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                    <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
                         A showcase of my recent work in web development, featuring modern designs and innovative solutions.
                     </p>
                 </div>
@@ -109,7 +109,7 @@ export default function Projects() {
                                     key={index}
                                     className="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-3"
                                 >
-                                    <div className="group bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden">
+                                    <div className="group bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden">
                                         {/* Image Container */}
                                         <div className="relative overflow-hidden">
                                             <img
@@ -125,7 +125,7 @@ export default function Projects() {
                                                     href={project.link}
                                                     target={project.link.startsWith('http') ? '_blank' : '_self'}
                                                     rel={project.link.startsWith('http') ? 'noopener noreferrer' : ''}
-                                                    className="bg-white/90 backdrop-blur-sm text-gray-900 px-6 py-3 rounded-full font-semibold hover:bg-white transition-colors duration-200 flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0"
+                                                    className="bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm text-gray-900 dark:text-gray-100 px-6 py-3 rounded-full font-semibold hover:bg-white dark:hover:bg-gray-800 transition-colors duration-200 flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0"
                                                 >
                                                     <ExternalLink size={18} />
                                                     View Project
@@ -135,10 +135,10 @@ export default function Projects() {
 
                                         {/* Content */}
                                         <div className="p-6">
-                                            <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-teal-600 transition-colors duration-200">
+                                            <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-3 group-hover:text-teal-600 transition-colors duration-200">
                                                 {project.title}
                                             </h3>
-                                            <p className="text-gray-600 line-clamp-3">
+                                            <p className="text-gray-600 dark:text-gray-300 line-clamp-3">
                                                 {project.description}
                                             </p>
                                         </div>
@@ -151,7 +151,7 @@ export default function Projects() {
                     {/* Navigation Arrows */}
                     <button
                         onClick={prevSlide}
-                        className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 backdrop-blur-sm hover:bg-white text-gray-800 p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-200 z-10 group"
+                        className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm hover:bg-white dark:hover:bg-gray-800 text-gray-800 dark:text-gray-100 p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-200 z-10 group"
                         aria-label="Previous project"
                     >
                         <ChevronLeft size={24} className="group-hover:scale-110 transition-transform duration-200" />
@@ -159,7 +159,7 @@ export default function Projects() {
 
                     <button
                         onClick={nextSlide}
-                        className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 backdrop-blur-sm hover:bg-white text-gray-800 p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-200 z-10 group"
+                        className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm hover:bg-white dark:hover:bg-gray-800 text-gray-800 dark:text-gray-100 p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-200 z-10 group"
                         aria-label="Next project"
                     >
                         <ChevronRight size={24} className="group-hover:scale-110 transition-transform duration-200" />
@@ -173,7 +173,7 @@ export default function Projects() {
                                 onClick={() => goToSlide(index)}
                                 className={`w-3 h-3 rounded-full transition-all duration-300 ${currentIndex === index
                                     ? 'bg-teal-600 scale-125'
-                                    : 'bg-gray-300 hover:bg-gray-400'
+                                    : 'bg-gray-300 dark:bg-gray-600 hover:bg-gray-400 dark:hover:bg-gray-500'
                                     }`}
                                 aria-label={`Go to slide ${index + 1}`}
                             />
