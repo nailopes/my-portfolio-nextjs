@@ -2,7 +2,7 @@ export default function About() {
     return (
         <section
             id="about"
-            style={{ backgroundImage: "url('/background.png')" }}
+            style={{ backgroundImage: "url('/background.jpeg')" }}
             className="flex flex-col md:flex-row items-center justify-center gap-12 py-20 bg-gray-50"
         >
             <img
