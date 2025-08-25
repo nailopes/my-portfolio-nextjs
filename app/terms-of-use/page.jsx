@@ -7,7 +7,7 @@ export default function TermsOfUse() {
         <main className="mx-auto max-w-3xl px-6 py-16">
             <header className="mb-8">
                 <h1 className="text-3xl font-bold tracking-tight">Terms of Use</h1>
-                <p className="text-sm text-gray-500">Last updated: {lastUpdated}</p>
+                <p className="text-sm text-gray-500 dark:text-white">Last updated: {lastUpdated}</p>
             </header>
 
             <section className="prose prose-invert prose-headings:scroll-mt-28">
