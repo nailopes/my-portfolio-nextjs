@@ -195,11 +195,11 @@ export default function Journey() {
     };
 
     return (
-        <section id="journey" className="py-20 px-6 bg-gradient-to-br from-gray-50 to-gray-100">
+        <section id="journey" className="py-20 px-6 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
             <div className="max-w-4xl mx-auto">
                 <div className="text-center mb-16">
-                    <h2 className="text-4xl font-bold text-gray-800 mb-4">My Journey</h2>
-                    <p className="text-gray-600 text-lg">Tracing the path of growth and learning</p>
+                    <h2 className="text-4xl font-bold text-gray-800 dark:text-gray-100 mb-4">My Journey</h2>
+                    <p className="text-gray-600 dark:text-gray-300 text-lg">Tracing the path of growth and learning</p>
                 </div>
 
                 <div className="relative">
@@ -218,9 +218,9 @@ export default function Journey() {
 
                                 {/* Content card */}
                                 <div className={`ml-16 md:ml-0 md:w-6/12 ${!isEven ? 'md:mr-auto md:pr-8' : 'md:ml-auto md:pl-8'}`}>
-                                    <div
-                                        className={`bg-white rounded-xl shadow-lg border ${colors.border} p-6 transform transition-all duration-300 cursor-pointer ${activeItem === index ? 'scale-105 shadow-xl' : colors.hover
-                                            }`}
+                                      <div
+                                          className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg border ${colors.border} dark:border-gray-700 p-6 transform transition-all duration-300 cursor-pointer ${activeItem === index ? 'scale-105 shadow-xl' : colors.hover
+                                              }`}
                                         onClick={() => setActiveItem(activeItem === index ? -1 : index)}
                                     >
                                         {/* Card header */}
@@ -230,17 +230,17 @@ export default function Journey() {
                                                     <Icon className="w-5 h-5 text-white" />
                                                 </div>
                                                 <div>
-                                                    <h3 className="text-xl font-bold text-gray-800">{item.title}</h3>
-                                                    <p className={`${colors.text} font-semibold`}>{item.role}</p>
+                                                    <h3 className="text-xl font-bold text-gray-800 dark:text-gray-100">{item.title}</h3>
+                                                    <p className={`${colors.text} font-semibold dark:text-gray-300`}>{item.role}</p>
                                                 </div>
                                             </div>
-                                            <span className={`text-sm ${colors.text} bg-gray-50 px-3 py-1 rounded-full font-medium`}>
+                                              <span className={`text-sm ${colors.text} bg-gray-50 dark:bg-gray-900 px-3 py-1 rounded-full font-medium`}>
                                                 {item.period}
                                             </span>
                                         </div>
 
                                         {/* Company and location */}
-                                        <div className="flex items-center space-x-4 mb-4 text-gray-600">
+                                          <div className="flex items-center space-x-4 mb-4 text-gray-600 dark:text-gray-300">
                                             <div className="flex items-center space-x-1">
                                                 <Briefcase className="w-4 h-4" />
                                                 <span className="text-sm">{item.company}</span>
@@ -252,22 +252,22 @@ export default function Journey() {
                                         </div>
 
                                         {/* Description */}
-                                        <p className={`text-gray-600 leading-relaxed transition-all duration-300 ${activeItem === index ? 'mb-4' : 'mb-0'
-                                            }`}>
+                                          <p className={`text-gray-600 dark:text-gray-300 leading-relaxed transition-all duration-300 ${activeItem === index ? 'mb-4' : 'mb-0'
+                                              }`}>
                                             {item.description}
                                         </p>
 
                                         {/* Skills - shown when active */}
                                         <div className={`transition-all duration-300 overflow-hidden ${activeItem === index ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'
                                             }`}>
-                                            <div className="pt-4 border-t border-gray-100">
-                                                <h4 className="text-sm font-semibold text-gray-700 mb-2">Technologies & Skills:</h4>
+                                              <div className="pt-4 border-t border-gray-100 dark:border-gray-700">
+                                                  <h4 className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Technologies & Skills:</h4>
                                                 <div className="flex flex-wrap gap-2">
                                                     {item.skills.map((skill, skillIndex) => (
-                                                        <span
-                                                            key={skillIndex}
-                                                            className={`px-3 py-1 ${colors.text} bg-gray-50 rounded-full text-sm font-medium border ${colors.border}`}
-                                                        >
+                                                          <span
+                                                              key={skillIndex}
+                                                              className={`px-3 py-1 ${colors.text} bg-gray-50 dark:bg-gray-900 rounded-full text-sm font-medium border ${colors.border} dark:border-gray-700`}
+                                                          >
                                                             {skill}
                                                         </span>
                                                     ))}
@@ -288,10 +288,10 @@ export default function Journey() {
                 </div>
 
                 {/* Call to action */}
-                <div className="text-center mt-16">
-                    <div className="bg-white rounded-xl shadow-lg p-8 border border-gray-200">
-                        <h3 className="text-2xl font-bold text-gray-800 mb-4">Ready for the Next Chapter</h3>
-                        <p className="text-gray-600 mb-6">
+                    <div className="text-center mt-16">
+                    <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 border border-gray-200 dark:border-gray-700">
+                        <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-4">Ready for the Next Chapter</h3>
+                        <p className="text-gray-600 dark:text-gray-300 mb-6">
                             I'm excited to bring my skills and passion to new challenges and opportunities.
                         </p>
                         {/* <a

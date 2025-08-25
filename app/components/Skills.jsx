@@ -92,7 +92,7 @@ const Skills = () => {
     ];
 
     const SkillCard = ({ category, icon, skills, color }) => (
-        <div className="group relative bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+        <div className="group relative bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 dark:border-gray-700">
             {/* Gradient background overlay */}
             <div className={`absolute inset-0 bg-gradient-to-br ${color} opacity-0 group-hover:opacity-5 rounded-2xl transition-opacity duration-300`}></div>
 
@@ -101,7 +101,7 @@ const Skills = () => {
                 <div className={`p-2 rounded-lg bg-gradient-to-r ${color} text-white`}>
                     {icon}
                 </div>
-                <h3 className="font-semibold text-gray-800 text-lg">{category}</h3>
+                <h3 className="font-semibold text-gray-800 dark:text-gray-100 text-lg">{category}</h3>
             </div>
 
             {/* Skills */}
@@ -109,10 +109,10 @@ const Skills = () => {
                 {skills.map((skill, index) => (
                     <div
                         key={index}
-                        className="flex items-center space-x-2 py-2 px-3 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors duration-200"
+                        className="flex items-center space-x-2 py-2 px-3 rounded-lg bg-gray-50 dark:bg-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors duration-200"
                     >
                         <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${color}`}></div>
-                        <span className="text-gray-700 text-sm font-medium">{skill}</span>
+                        <span className="text-gray-700 dark:text-gray-300 text-sm font-medium">{skill}</span>
                     </div>
                 ))}
             </div>
@@ -120,26 +120,26 @@ const Skills = () => {
     );
 
     return (
-        <section className="min-h-screen bg-white from-slate-50 via-blue-50 to-indigo-50 py-16 px-4">
+        <section className="min-h-screen bg-white dark:bg-gray-900 from-slate-50 via-blue-50 to-indigo-50 dark:from-gray-800 dark:via-gray-800 dark:to-gray-900 py-16 px-4">
             <div className="max-w-7xl mx-auto">
                 {/* Header */}
                 <div className="text-center mb-12">
-                    <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+                    <h2 className="text-4xl md:text-5xl font-bold text-gray-800 dark:text-gray-100 mb-4">
                         Skills & Expertise
                     </h2>
-                    <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                    <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
                         A comprehensive overview of my technical abilities and professional competencies
                     </p>
                 </div>
 
                 {/* Tab Navigation */}
                 <div className="flex justify-center mb-12">
-                    <div className="bg-white rounded-2xl p-2 shadow-lg border border-gray-200">
+                    <div className="bg-white dark:bg-gray-800 rounded-2xl p-2 shadow-lg border border-gray-200 dark:border-gray-700">
                         <button
                             onClick={() => setActiveTab("hard")}
                             className={`flex items-center space-x-2 px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${activeTab === "hard"
                                 ? "bg-gradient-to-r bg-teal-500 text-white shadow-lg"
-                                : "text-gray-600 hover:text-gray-800"
+                                : "text-gray-600 hover:text-gray-800 dark:text-gray-300 dark:hover:text-gray-100"
                                 }`}
                         >
                             <Wrench className="w-5 h-5" />
@@ -149,7 +149,7 @@ const Skills = () => {
                             onClick={() => setActiveTab("soft")}
                             className={`flex items-center space-x-2 px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${activeTab === "soft"
                                 ? "bg-gradient-to-r bg-pink-500 text-white shadow-lg"
-                                : "text-gray-600 hover:text-gray-800"
+                                : "text-gray-600 hover:text-gray-800 dark:text-gray-300 dark:hover:text-gray-100"
                                 }`}
                         >
                             <Heart className="w-5 h-5" />
@@ -170,23 +170,23 @@ const Skills = () => {
                 </div>
 
                 {/* Stats Footer */}
-                <div className="mt-16 bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+                <div className="mt-16 bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-100 dark:border-gray-700">
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                         <div>
                             <div className="text-3xl font-bold text-blue-600 mb-2">{hardSkills.reduce((acc, group) => acc + group.skills.length, 0)}</div>
-                            <div className="text-gray-600 font-medium">Technical Skills</div>
+                            <div className="text-gray-600 dark:text-gray-300 font-medium">Technical Skills</div>
                         </div>
                         <div>
                             <div className="text-3xl font-bold text-pink-600 mb-2">{softSkills.reduce((acc, group) => acc + group.skills.length, 0)}</div>
-                            <div className="text-gray-600 font-medium">Soft Skills</div>
+                            <div className="text-gray-600 dark:text-gray-300 font-medium">Soft Skills</div>
                         </div>
                         <div>
                             <div className="text-3xl font-bold text-green-600 mb-2">{hardSkills.length}</div>
-                            <div className="text-gray-600 font-medium">Tech Categories</div>
+                            <div className="text-gray-600 dark:text-gray-300 font-medium">Tech Categories</div>
                         </div>
                         <div>
                             <div className="text-3xl font-bold text-purple-600 mb-2">{softSkills.length}</div>
-                            <div className="text-gray-600 font-medium">Professional Areas</div>
+                            <div className="text-gray-600 dark:text-gray-300 font-medium">Professional Areas</div>
                         </div>
                     </div>
                 </div>
