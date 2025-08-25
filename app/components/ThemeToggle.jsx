@@ -1,32 +1,42 @@
 'use client';
-import { useEffect, useState } from 'react';
 import { Moon, Sun } from 'lucide-react';
+import { useTheme } from './ThemeProvider'; // Adjust path as needed
 
 export default function ThemeToggle() {
-  const [theme, setTheme] = useState('light');
-
-  useEffect(() => {
-    const stored = localStorage.getItem('theme');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const initial = stored || (prefersDark ? 'dark' : 'light');
-    setTheme(initial);
-    document.documentElement.classList.toggle('dark', initial === 'dark');
-  }, []);
+  const { theme, setTheme, mounted } = useTheme();
 
   const toggleTheme = () => {
     const newTheme = theme === 'dark' ? 'light' : 'dark';
+    console.log('Toggling from', theme, 'to', newTheme); // Debug log
     setTheme(newTheme);
-    document.documentElement.classList.toggle('dark', newTheme === 'dark');
-    localStorage.setItem('theme', newTheme);
   };
 
+  // Show loading state until mounted
+  if (!mounted) {
+    return (
+      <button
+        className="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors opacity-50"
+        disabled
+        aria-label="Loading theme toggle"
+      >
+        <Moon size={20} />
+      </button>
+    );
+  }
+
   return (
-    <button
-      onClick={toggleTheme}
-      className="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-black transition-colors"
-      aria-label="Toggle Dark Mode"
-    >
-      {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
-    </button>
+    <div className="flex items-center gap-2">
+      <button
+        onClick={toggleTheme}
+        className="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors border border-gray-300 dark:border-gray-600"
+        aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
+      >
+        {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
+      </button>
+      {/* Debug info - remove this in production */}
+      <span className="text-sm text-gray-600 dark:text-gray-400">
+        Current: {theme}
+      </span>
+    </div>
   );
 }
