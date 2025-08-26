@@ -76,7 +76,7 @@
 }
 
 .section-with-bg-secondary {
-  background-color: #f9fafb;
+
   background-image: url('/background.jpeg');
   background-size: cover;
   background-position: center;
@@ -84,7 +84,6 @@
 }
 
 .dark .section-with-bg-secondary {
-  background-color: #4b5563;
   background-image: url('/background-dark.jpeg');
 }
 
