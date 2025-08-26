@@ -3,12 +3,11 @@ import { Moon, Sun } from 'lucide-react';
 import { useTheme } from './ThemeProvider'; // Adjust path as needed
 
 export default function ThemeToggle() {
-  const { theme, setTheme, mounted } = useTheme();
+  const { theme, toggleTheme, mounted } = useTheme();
 
-  const toggleTheme = () => {
-    const newTheme = theme === 'dark' ? 'light' : 'dark';
-    console.log('Toggling from', theme, 'to', newTheme); // Debug log
-    setTheme(newTheme);
+  const handleToggle = () => {
+    console.log('Toggling from', theme, 'to', theme === 'dark' ? 'light' : 'dark'); // Debug log
+    toggleTheme();
   };
 
   // Show loading state until mounted
@@ -27,7 +26,7 @@ export default function ThemeToggle() {
   return (
     <div className="flex items-center gap-2">
       <button
-        onClick={toggleTheme}
+        onClick={handleToggle}
         className="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors border border-gray-300 dark:border-gray-600"
         aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
       >

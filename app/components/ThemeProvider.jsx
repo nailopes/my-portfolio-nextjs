@@ -3,7 +3,8 @@ import { createContext, useContext, useEffect, useState } from 'react';
 
 const ThemeContext = createContext({
     theme: 'light',
-    setTheme: () => { },
+    setTheme: () => {},
+    toggleTheme: () => {},
 });
 
 export const useTheme = () => {
@@ -36,12 +37,15 @@ export function ThemeProvider({ children, ...props }) {
 
     const applyTheme = (newTheme) => {
         const root = document.documentElement;
+        const body = document.body;
 
         // Remove both classes first
         root.classList.remove('light', 'dark');
+        body.classList.remove('light', 'dark');
 
-        // Add the new theme class
+        // Add the new theme class to root and body
         root.classList.add(newTheme);
+        body.classList.add(newTheme);
 
         console.log('Applied theme:', newTheme, 'Classes:', root.className); // Debug log
     };
@@ -53,9 +57,14 @@ export function ThemeProvider({ children, ...props }) {
         applyTheme(newTheme);
     };
 
+    const toggleTheme = () => {
+        setTheme(theme === 'dark' ? 'light' : 'dark');
+    };
+
     const value = {
         theme: mounted ? theme : 'light',
         setTheme,
+        toggleTheme,
         mounted, // Expose mounted state for debugging
     };
 
