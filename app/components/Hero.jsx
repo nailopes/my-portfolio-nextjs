@@ -1,8 +1,8 @@
 export default function Hero() {
     return (
-        <section className="text-center py-20">
-            <h1 className="text-4xl md:text-6xl font-bold mb-8 text-gray-900 dark:text-white">Hi, I'm Naiara Costa</h1>
-            <div className="mx-auto max-w-7xl justify-center items-center text-lg md:text-xl text-gray-700 dark:text-white mb-8">
+        <section className="section-primary text-center py-20">
+            <h1 className="text-4xl md:text-6xl font-bold mb-8 text-heading">Hi, I'm Naiara Costa</h1>
+            <div className="mx-auto max-w-7xl justify-center items-center text-lg md:text-xl text-content mb-8">
                 <p className="mb-8 mx-4">
                     Civil Engineer turned Developer. I build useful things with code and caffeine.
                 </p>

@@ -14,11 +14,118 @@
 }
 
 .dark {
-  --background: #000000;
+  --background: #353333;
   --foreground: #ffffff;
+}
+
+
+/* Text content classes */
+.text-content {
+  color: #374151; /* gray-700 equivalent */
+}
+
+.dark .text-content {
+  color: #ffffff;
+}
+
+.text-heading {
+  color: #111827; /* gray-900 equivalent */
+}
+
+.dark .text-heading {
+  color: #ffffff;
+}
+
+/* Alternating section backgrounds */
+.section-primary {
+  background-color: #ffffff; /* white */
+}
+
+.dark .section-primary {
+  background-color: #111827; /* gray-900 */
+}
+
+.section-secondary {
+  background-color: #f9fafb; /* gray-50 */
+}
+
+.dark .section-secondary {
+  background-color: #4b5563; /* gray-600 */
+}
+
+.section-tertiary {
+  background-color: #f3f4f6; /* gray-100 */
+}
+
+.dark .section-tertiary {
+  background-color: #374151; /* gray-700 */
+}
+
+/* Background with image overlay classes */
+.section-with-bg-primary {
+  background-color: #ffffff;
+  background-image: url('/background.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
+}
+
+.dark .section-with-bg-primary {
+  background-color: #111827;
+  background-image: url('/background-dark.jpeg');
+}
+
+.section-with-bg-secondary {
+  background-color: #f9fafb;
+  background-image: url('/background.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
+}
+
+.dark .section-with-bg-secondary {
+  background-color: #4b5563;
+  background-image: url('/background-dark.jpeg');
+}
+
+.section-with-bg-tertiary {
+  background-color: #f3f4f6;
+  background-image: url('/background.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
+}
+
+.dark .section-with-bg-tertiary {
+  background-color: #374151;
+  background-image: url('/background-dark.jpeg');
+}
+
+/* If you want different opacity overlays */
+.section-overlay-light {
+  position: relative;
+}
+
+.section-overlay-light::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.3);
+  pointer-events: none;
+}
+
+.dark .section-overlay-light::before {
+  background-color: rgba(17, 24, 39, 0.7);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
+}
+
+section {
+  background: inherit; 
 }

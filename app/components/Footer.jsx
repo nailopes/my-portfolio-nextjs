@@ -44,7 +44,7 @@ export default function Footer() {
     ];
 
     return (
-        <footer className="bg-gray-100 text-gray-900 dark:bg-black dark:text-white relative">
+        <footer className="bg-gray-900 text-gray-900 relative">
             {/* Scroll to top button */}
             {showScrollTop && (
                 <button
@@ -62,7 +62,7 @@ export default function Footer() {
                     {/* Connect section */}
                     <div>
                         <h4 className="text-lg font-semibold mb-4 text-teal-400">Let's Connect</h4>
-                        <p className="text-gray-700 dark:text-white text-sm mb-4">
+                        <p className="text-gray-50 text-sm mb-4">
                             I'm always open to discussing new opportunities and interesting projects.
                         </p>
                         <div className="flex justify-center space-x-4">
@@ -86,15 +86,15 @@ export default function Footer() {
                 </div>
 
                 {/* Bottom section */}
-                <div className="border-t border-gray-300 dark:border-gray-700 mt-12 pt-8">
+                <div className="border-t border-gray-300 mt-12 pt-8">
                     <div className="flex flex-col items-center space-y-4">
-                        <div className="flex items-center space-x-1 text-sm text-gray-600 dark:text-white">
+                        <div className="flex items-center space-x-1 text-sm text-gray-50">
                             <span>&copy; {currentYear} Crafted by Naiara Costa. Made with</span>
                             <Heart className="w-4 h-4 text-red-500 animate-pulse" />
                             <span>using Next.js & Tailwind CSS</span>
                         </div>
 
-                        <div className="flex items-center space-x-6 text-sm text-gray-600 dark:text-white">
+                        <div className="flex items-center space-x-6 text-sm text-gray-50">
 
                             <a
                                 href="/privacy-policy"

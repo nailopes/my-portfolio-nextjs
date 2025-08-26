@@ -1,12 +1,12 @@
 'use client';
 import { Moon, Sun } from 'lucide-react';
-import { useTheme } from './ThemeProvider'; // Adjust path as needed
+import { useTheme } from './ThemeProvider';
 
 export default function ThemeToggle() {
   const { theme, toggleTheme, mounted } = useTheme();
 
   const handleToggle = () => {
-    console.log('Toggling from', theme, 'to', theme === 'dark' ? 'light' : 'dark'); // Debug log
+
     toggleTheme();
   };
 
@@ -32,10 +32,7 @@ export default function ThemeToggle() {
       >
         {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
       </button>
-      {/* Debug info - remove this in production */}
-      <span className="text-sm text-gray-600 dark:text-gray-400">
-        Current: {theme}
-      </span>
+
     </div>
   );
 }

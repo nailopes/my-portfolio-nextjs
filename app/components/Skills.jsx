@@ -92,7 +92,7 @@ const Skills = () => {
     ];
 
     const SkillCard = ({ category, icon, skills, color }) => (
-        <div className="group relative bg-white dark:bg-black rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 dark:border-gray-700">
+        <div className="group relative section-secondary rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 dark:border-gray-700">
             {/* Gradient background overlay */}
             <div className={`absolute inset-0 bg-gradient-to-br ${color} opacity-0 group-hover:opacity-5 rounded-2xl transition-opacity duration-300`}></div>
 
@@ -101,7 +101,7 @@ const Skills = () => {
                 <div className={`p-2 rounded-lg bg-gradient-to-r ${color} text-white`}>
                     {icon}
                 </div>
-                <h3 className="font-semibold text-gray-800 dark:text-white text-lg">{category}</h3>
+                <h3 className="font-semibold text-heading text-lg">{category}</h3>
             </div>
 
             {/* Skills */}
@@ -109,10 +109,10 @@ const Skills = () => {
                 {skills.map((skill, index) => (
                     <div
                         key={index}
-                        className="flex items-center space-x-2 py-2 px-3 rounded-lg bg-gray-50 dark:bg-black hover:bg-gray-100 dark:hover:bg-black transition-colors duration-200"
+                        className="flex items-center space-x-2 py-2 px-3 rounded-lg bg-white hover:bg-gray-100 dark:hover:bg-black transition-colors duration-200"
                     >
                         <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${color}`}></div>
-                        <span className="text-gray-700 dark:text-white text-sm font-medium">{skill}</span>
+                        <span className="text-gray-700 text-sm font-medium">{skill}</span>
                     </div>
                 ))}
             </div>
@@ -124,22 +124,22 @@ const Skills = () => {
             <div className="max-w-7xl mx-auto">
                 {/* Header */}
                 <div className="text-center mb-12">
-                    <h2 className="text-4xl md:text-5xl font-bold text-gray-800 dark:text-white mb-4">
+                    <h2 className="text-4xl md:text-5xl font-bold text-heading mb-4">
                         Skills & Expertise
                     </h2>
-                    <p className="text-lg text-gray-600 dark:text-white max-w-2xl mx-auto">
+                    <p className="text-lg text-content max-w-2xl mx-auto">
                         A comprehensive overview of my technical abilities and professional competencies
                     </p>
                 </div>
 
                 {/* Tab Navigation */}
                 <div className="flex justify-center mb-12">
-                    <div className="bg-white dark:bg-black rounded-2xl p-2 shadow-lg border border-gray-200 dark:border-gray-700">
+                    <div className="section-secondary rounded-2xl p-2 shadow-lg border border-gray-200 dark:border-gray-700">
                         <button
                             onClick={() => setActiveTab("hard")}
                             className={`flex items-center space-x-2 px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${activeTab === "hard"
                                 ? "bg-gradient-to-r bg-teal-500 text-white shadow-lg"
-                                : "text-gray-600 hover:text-gray-800 dark:text-white dark:hover:text-white"
+                                : "text-content hover:text-content"
                                 }`}
                         >
                             <Wrench className="w-5 h-5" />
@@ -148,8 +148,8 @@ const Skills = () => {
                         <button
                             onClick={() => setActiveTab("soft")}
                             className={`flex items-center space-x-2 px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${activeTab === "soft"
-                                ? "bg-gradient-to-r bg-pink-500 text-white shadow-lg"
-                                : "text-gray-600 hover:text-gray-800 dark:text-white dark:hover:text-white"
+                                ? "bg-gradient-to-r bg-pink-500 text-content shadow-lg"
+                                : "text-content hover:text-content"
                                 }`}
                         >
                             <Heart className="w-5 h-5" />
@@ -170,23 +170,23 @@ const Skills = () => {
                 </div>
 
                 {/* Stats Footer */}
-                <div className="mt-16 bg-white dark:bg-black rounded-2xl p-8 shadow-lg border border-gray-100 dark:border-gray-700">
+                <div className="mt-16 bg-section-tertiary rounded-2xl p-8 shadow-lg border border-gray-100 dark:border-gray-700">
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                         <div>
                             <div className="text-3xl font-bold text-blue-600 mb-2">{hardSkills.reduce((acc, group) => acc + group.skills.length, 0)}</div>
-                            <div className="text-gray-600 dark:text-white font-medium">Technical Skills</div>
+                            <div className="text-content font-medium">Technical Skills</div>
                         </div>
                         <div>
                             <div className="text-3xl font-bold text-pink-600 mb-2">{softSkills.reduce((acc, group) => acc + group.skills.length, 0)}</div>
-                            <div className="text-gray-600 dark:text-white font-medium">Soft Skills</div>
+                            <div className="text-content font-medium">Soft Skills</div>
                         </div>
                         <div>
                             <div className="text-3xl font-bold text-green-600 mb-2">{hardSkills.length}</div>
-                            <div className="text-gray-600 dark:text-white font-medium">Tech Categories</div>
+                            <div className="text-content font-medium">Tech Categories</div>
                         </div>
                         <div>
                             <div className="text-3xl font-bold text-purple-600 mb-2">{softSkills.length}</div>
-                            <div className="text-gray-600 dark:text-white font-medium">Professional Areas</div>
+                            <div className="text-content font-medium">Professional Areas</div>
                         </div>
                     </div>
                 </div>

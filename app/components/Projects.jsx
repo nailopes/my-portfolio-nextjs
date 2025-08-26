@@ -84,13 +84,13 @@ export default function Projects() {
     }, [currentIndex, slidesToShow]);
 
     return (
-        <section id="projects" className="py-20 px-6 bg-gradient-to-br from-gray-50 to-white dark:from-black dark:to-black">
+        <section id="projects" className="section-tertiary py-20 px-6">
             <div className="max-w-7xl mx-auto">
                 <div className="text-center mb-16">
-                    <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+                    <h2 className="text-4xl md:text-5xl font-bold text-heading mb-4">
                         Featured Projects
                     </h2>
-                    <p className="text-xl text-gray-600 dark:text-white max-w-3xl mx-auto">
+                    <p className="text-xl text-content max-w-3xl mx-auto">
                         A showcase of my recent work in web development, featuring modern designs and innovative solutions.
                     </p>
                 </div>
@@ -109,7 +109,7 @@ export default function Projects() {
                                     key={index}
                                     className="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-3"
                                 >
-                                    <div className="group bg-white dark:bg-black rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden">
+                                    <div className="group bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden">
                                         {/* Image Container */}
                                         <div className="relative overflow-hidden">
                                             <img

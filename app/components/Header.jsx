@@ -26,7 +26,7 @@ export default function Header() {
     }, [open]);
 
     return (
-        <header className="flex justify-between items-center p-6 bg-white dark:bg-black shadow-md sticky top-0 z-50 relative">
+        <header className="flex justify-between items-center p-6 section-primary shadow-md sticky top-0 z-50 relative">
             <div className="text-xl font-bold">&lt;devnai&gt;</div>
             <button
                 ref={buttonRef}
@@ -38,7 +38,7 @@ export default function Header() {
             </button>
             <nav
                 ref={menuRef}
-                className={`text-sm ${open ? "block" : "hidden"} md:flex md:space-x-6 absolute md:static top-full left-0 right-0 bg-white dark:bg-black md:bg-transparent md:dark:bg-transparent shadow-md md:shadow-none`}
+                className={`text-sm ${open ? "block" : "hidden"} md:flex md:items-center md:space-x-6 absolute md:static top-full left-0 right-0 bg-white  md:bg-transparent shadow-md md:shadow-none`}
             >
                 <Link href="#about" className="block px-6 py-2 md:p-0">About Me</Link>
                 <Link href="#projects" className="block px-6 py-2 md:p-0">Projects</Link>
