@@ -11,30 +11,30 @@ export default function Projects() {
         {
             title: "Linktree-style Page",
             image: "/linktree.png",
-            alt: "Linktree-style web page interface showing several rounded buttons with social media icons and links, set against a clean white background. The layout is simple and inviting.",
+            alt: "Linktree-style web page interfaceS.",
             link: "https://nailopes.github.io/linktree-example/",
             description: "A clean, modern link aggregation page with social media integration and responsive design."
         },
         {
             title: "My first Portfolio Website",
             image: "/portfolio.png",
-            alt: "Personal portfolio homepage featuring a centered profile photo, bold heading with the name Nai Lopes, and navigation links for About, Projects, and Contact. The design is modern and welcoming.",
+            alt: "Personal portfolio homepage.",
             link: "https://nailopes.github.io/my-portfolio/",
             description: "My first portfolio website showcasing my skills and projects, built with pure HTML and CSS to demonstrate my foundational web development skills."
         },
         {
             title: "E-commerce Platform",
             image: "/choripan.png",
-            alt: "E-commerce website interface with product grid, shopping cart functionality, and clean checkout process.",
+            alt: "E-commerce website interface.",
             link: "https://choripan.ca",
             description: "Full-stack e-commerce solution with contact integration and product features, built with Next.js and Tailwind CSS."
         },
         {
-            title: "Task Management App",
-            image: "/portfolio.png",
-            alt: "Task management application with drag-and-drop functionality, project boards, and team collaboration features.",
-            link: "#",
-            description: "Collaborative task management with real-time updates and team productivity features."
+            title: "Workout Tracker",
+            image: "/workout-tracker.png",
+            alt: "Workout tracking application.",
+            link: "https://github.com/nailopes/workout-tracker.git",
+            description: "A workout tracking application with user authentication, exercise logging, and progress visualization features."
         }
     ];
 
