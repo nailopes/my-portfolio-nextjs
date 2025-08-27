@@ -7,7 +7,7 @@ export default function About() {
             <img
                 src="/nai-photo.png"
                 alt="Naiara Costa"
-                className="w-96 lg:w-[28rem] xl:w-[32rem] rounded-full shadow-lg mb-6 md:mb-0"
+                className="w-96 lg:w-[28rem] xl:w-[32rem] rounded-full shadow-adaptive mb-6 md:mb-0"
             />
             <div className="max-w-md lg:max-w-lg xl:max-w-xl text-center md:text-left relative z-10">
                 <h2 className="text-3xl lg:text-4xl xl:text-5xl font-bold mb-4 text-heading">ABOUT ME</h2>

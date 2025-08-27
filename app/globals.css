@@ -105,6 +105,19 @@
   position: relative;
 }
 
+/* Shadow classes for light and dark modes */
+.shadow-adaptive {
+  transition: filter 0.3s ease;
+  box-shadow: 0 25px 50px -12px rgba(75, 85, 99, 0.4); /* shadow-2xl with gray-600/40 */
+}
+
+.dark .shadow-adaptive {
+  background-color: rgba(32, 33, 35, 0.621); /* gray-900/70 */
+  filter: brightness(0.7) contrast(1.15) saturate(1.1);
+  transition: filter 0.3s ease;
+  box-shadow: 0 25px 50px -12px rgba(243, 244, 246, 0.4); /* shadow-2xl with gray-100/40 */
+}
+
 .section-overlay-light::before {
   content: '';
   position: absolute;
