@@ -38,7 +38,7 @@ export default function Header() {
             </button>
             <nav
                 ref={menuRef}
-                className={`text-sm ${open ? "block" : "hidden"} md:flex md:items-center md:space-x-6 absolute md:static top-full left-0 right-0 bg-white  md:bg-transparent shadow-md md:shadow-none`}
+                className={`text-sm ${open ? "block" : "hidden"} md:flex md:items-center md:space-x-6 absolute md:static top-full left-0 right-0 section-primary md:bg-transparent shadow-md md:shadow-none`}
             >
                 <Link href="#about" className="block px-6 py-2 md:p-0">About Me</Link>
                 <Link href="#projects" className="block px-6 py-2 md:p-0">Projects</Link>

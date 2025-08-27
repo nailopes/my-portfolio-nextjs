@@ -74,7 +74,7 @@ export default function Footer() {
                                         href={social.url}
                                         target={social.name !== 'Email' ? '_blank' : undefined}
                                         rel={social.name !== 'Email' ? 'noopener noreferrer' : undefined}
-                                        className={`p-2 bg-gray-200 dark:bg-black rounded-lg transition-all duration-200 hover:bg-gray-300 dark:hover:bg-black ${social.color} hover:scale-110`}
+                                        className={`p-2 bg-gray-200 rounded-lg transition-all duration-200 hover:bg-gray-300 ${social.color} hover:scale-110`}
                                         aria-label={social.name}
                                     >
                                         <Icon className="w-5 h-5" />
