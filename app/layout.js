@@ -30,15 +30,15 @@ export const metadata = {
     locale: "en_US",
     url: "https://naiaracosta.com",
     title: "Naiara Costa - Full Stack Developer Portfolio",
-    description: "[YOUR BRIEF BIO] - Full stack developer with expertise in front-end. Explore my projects and get in touch.",
+    description: "Full stack developer with expertise in front-end. Explore my projects and get in touch.",
     siteName: "Naiara Costa Portfolio",
     images: [
       {
-        url: "./og-portfolio.jpg",
+        url: "./og-portfolio.png",
         width: 1200,
         height: 630,
         alt: "Naiara Costa - Full Stack Developer Portfolio",
-        type: "image/jpeg",
+        type: "image/png",
       },
     ],
   },
