@@ -108,6 +108,7 @@
 /* Shadow classes for light and dark modes */
 .shadow-adaptive {
   transition: filter 0.3s ease;
+   filter: brightness(0.9) saturate(1.1);
   box-shadow: 0 25px 50px -12px rgba(75, 85, 99, 0.4); /* shadow-2xl with gray-600/40 */
 }
 
