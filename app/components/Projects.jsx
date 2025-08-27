@@ -9,6 +9,20 @@ export default function Projects() {
 
     const projects = [
         {
+            title: "Transit Map",
+            image: "/transit-map.png",
+            alt: "Icon-driven, accessible transit for seniors & visitors",
+            link: "https://nailopes.github.io/transit-map/",
+            description: "Course client project: an interactive map that surfaces nearby stops, routes, and live service info with an icon-first UI designed to reduce language barriers and improve clarity."
+        },
+        {
+            title: "Doughnut Hub",
+            image: "/doughnut-hub.png",
+            alt: "Multi-scale portraits, comparisons, practitioner guidance",
+            link: "https://nailopes.github.io/doughnut-hub/",
+            description: "MVP built during my course in collaboration with DEAL to centralize Doughnut metrics and methods across local, national, and global scales. Includes custom Data Portraits, interactive Doughnut plots, and embedded guidance."
+        },
+        {
             title: "Linktree-style Page",
             image: "/linktree.png",
             alt: "Linktree-style web page interfaceS.",
