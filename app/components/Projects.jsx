@@ -12,14 +12,14 @@ export default function Projects() {
             title: "Transit Map",
             image: "/transit-map.png",
             alt: "Icon-driven, accessible transit for seniors & visitors",
-            link: "https://nailopes.github.io/transit-map/",
+            link: "https://github.com/EvolveU-FSD/c13-project2-team4.git",
             description: "Course client project: an interactive map that surfaces nearby stops, routes, and live service info with an icon-first UI designed to reduce language barriers and improve clarity."
         },
         {
             title: "Doughnut Hub",
             image: "/doughnut-hub.png",
             alt: "Multi-scale portraits, comparisons, practitioner guidance",
-            link: "https://nailopes.github.io/doughnut-hub/",
+            link: "https://github.com/EvolveU-FSD/c13-project3-team5.git",
             description: "MVP built during my course in collaboration with DEAL to centralize Doughnut metrics and methods across local, national, and global scales. Includes custom Data Portraits, interactive Doughnut plots, and embedded guidance."
         },
         {
