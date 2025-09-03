@@ -43,7 +43,7 @@ export default function Header() {
                 <Link href="#about" className="block px-6 py-2 md:p-0">About Me</Link>
                 <Link href="#projects" className="block px-6 py-2 md:p-0">Projects</Link>
                 <Link href="#journey" className="block px-6 py-2 md:p-0">My Journey</Link>
-                <Link href="#contact" className="block px-6 py-2 md:p-0">Contact</Link>
+                <Link href="#footer" className="block px-6 py-2 md:p-0">Contact</Link>
                 <div className="block px-6 py-2 md:p-0"><ThemeToggle /></div>
             </nav>
         </header>
