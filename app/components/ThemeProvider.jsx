@@ -3,8 +3,8 @@ import { createContext, useContext, useEffect, useState } from 'react';
 
 const ThemeContext = createContext({
     theme: 'light',
-    setTheme: () => {},
-    toggleTheme: () => {},
+    setTheme: () => { },
+    toggleTheme: () => { },
 });
 
 export const useTheme = () => {
@@ -30,7 +30,6 @@ export function ThemeProvider({ children, ...props }) {
         const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
         const initial = stored || (prefersDark ? 'dark' : 'light');
 
-        console.log('Initial theme:', initial); // Debug log
         setThemeState(initial);
         applyTheme(initial);
     }, [mounted]);
@@ -46,12 +45,9 @@ export function ThemeProvider({ children, ...props }) {
         // Add the new theme class to root and body
         root.classList.add(newTheme);
         body.classList.add(newTheme);
-
-        console.log('Applied theme:', newTheme, 'Classes:', root.className); // Debug log
     };
 
     const setTheme = (newTheme) => {
-        console.log('Setting theme to:', newTheme); // Debug log
         setThemeState(newTheme);
         localStorage.setItem('theme', newTheme);
         applyTheme(newTheme);
