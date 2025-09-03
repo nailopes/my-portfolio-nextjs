@@ -44,7 +44,7 @@ export default function Footer() {
     ];
 
     return (
-        <footer className="bg-gray-900 text-gray-900 relative">
+        <footer id="footer" className="bg-gray-900 text-gray-900 relative">
             {/* Scroll to top button */}
             {showScrollTop && (
                 <button
