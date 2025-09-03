@@ -16,7 +16,7 @@ export default function Hero() {
                     I’m actively studying new technologies and building projects that challenge me to improve daily. I believe great products come from combining strong technical skills with empathy, communication, and continuous learning.
                 </p>
                 <p className="mb-8 mx-4">
-                    Outside of code, you’ll usually find me outdoors hiking, exploring nature, or finding fresh inspiration for my next project.
+                    Outside of coding, I enjoy creative outlets like design, photography, and fitness, which help me stay energized and inspired for new challenges.
                 </p>
 
             </div>
