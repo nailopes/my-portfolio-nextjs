@@ -13,14 +13,16 @@ export default function Projects() {
             image: "/transit-map.png",
             alt: "Icon-driven, accessible transit for seniors & visitors",
             link: "https://github.com/EvolveU-FSD/c13-project2-team4.git",
-            description: "Course client project: an interactive map that surfaces nearby stops, routes, and live service info with an icon-first UI designed to reduce language barriers and improve clarity."
+            description: "Course client project: an interactive map that surfaces nearby stops, routes, and live service info with an icon-first UI designed to reduce language barriers and improve clarity.",
+            disabled: true
         },
         {
             title: "Doughnut Hub",
             image: "/doughnut-hub.png",
             alt: "Multi-scale portraits, comparisons, practitioner guidance",
             link: "https://github.com/EvolveU-FSD/c13-project3-team5.git",
-            description: "MVP built during my course in collaboration with DEAL to centralize Doughnut metrics and methods across local, national, and global scales. Includes custom Data Portraits, interactive Doughnut plots, and embedded guidance."
+            description: "MVP built during my course in collaboration with DEAL to centralize Doughnut metrics and methods across local, national, and global scales. Includes custom Data Portraits, interactive Doughnut plots, and embedded guidance.",
+            disabled: true
         },
         {
             title: "Linktree-style Page",
@@ -48,7 +50,8 @@ export default function Projects() {
             image: "/workout-tracker.png",
             alt: "Workout tracking application.",
             link: "https://github.com/nailopes/workout-tracker.git",
-            description: "A workout tracking application with user authentication, exercise logging, and progress visualization features."
+            description: "A workout tracking application with user authentication, exercise logging, and progress visualization features.",
+            disabled: true
         }
     ];
 
@@ -123,7 +126,7 @@ export default function Projects() {
                                     key={index}
                                     className="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-3"
                                 >
-                                    <div className="group bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden">
+                                    <div className="group bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden h-[500px] flex flex-col">
                                         {/* Image Container */}
                                         <div className="relative overflow-hidden">
                                             <img
@@ -134,25 +137,27 @@ export default function Projects() {
                                             <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
                                             {/* Overlay Link */}
-                                            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                                <a
-                                                    href={project.link}
-                                                    target={project.link.startsWith('http') ? '_blank' : '_self'}
-                                                    rel={project.link.startsWith('http') ? 'noopener noreferrer' : ''}
-                                                    className="bg-white/90 dark:bg-black/90 backdrop-blur-sm text-gray-900 dark:text-white px-6 py-3 rounded-full font-semibold hover:bg-white dark:hover:bg-black transition-colors duration-200 flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0"
-                                                >
-                                                    <ExternalLink size={18} />
-                                                    View Project
-                                                </a>
-                                            </div>
+                                            {!project.disabled && (
+                                                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                                    <a
+                                                        href={project.link}
+                                                        target={project.link.startsWith('http') ? '_blank' : '_self'}
+                                                        rel={project.link.startsWith('http') ? 'noopener noreferrer' : ''}
+                                                        className="bg-white/90 dark:bg-black/90 backdrop-blur-sm text-gray-900 dark:text-white px-6 py-3 rounded-full font-semibold hover:bg-white dark:hover:bg-black transition-colors duration-200 flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0"
+                                                    >
+                                                        <ExternalLink size={18} />
+                                                        View Project
+                                                    </a>
+                                                </div>
+                                            )}
                                         </div>
 
                                         {/* Content */}
-                                        <div className="p-6">
+                                        <div className="p-8 flex-1 flex flex-col">
                                             <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-teal-600 transition-colors duration-200">
                                                 {project.title}
                                             </h3>
-                                            <p className="text-gray-600 dark:text-white line-clamp-3">
+                                            <p className="text-gray-600 dark:text-white">
                                                 {project.description}
                                             </p>
                                         </div>
