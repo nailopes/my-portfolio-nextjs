@@ -11,6 +11,26 @@ export default function Journey() {
 
         {
             id: 1,
+            title: "Junior Technical Solutuions Analyst",
+            company: "Windmill Microlending",
+            role: "Data & DevOps Intern",
+            period: "2026",
+            location: "Calgary, AB",
+            type: "WORK",
+            icon: Briefcase,
+            description: "A hybrid role combining data analysis and DevOps tasks to support Windmill's mission of providing microloans to entrepreneurs in developing countries. Responsibilities include managing databases, automating workflows, and ensuring data integrity while collaborating with cross-functional teams to enhance operational efficiency.",
+            skills: [
+                "API Integration",
+                "SQL & NoSQL Databases",
+                "Data Visualization",
+                "Agile Practices",
+                "Cloud Services",
+                "Preset build and update dashboards"
+            ],
+            color: "rose",
+        },
+        {
+            id: 2,
             title: "Personal & Side Projects",
             company: "Independent",
             role: "Full Stack Developer",
@@ -32,7 +52,7 @@ export default function Journey() {
         },
 
         {
-            id: 2,
+            id: 3,
             title: "Capstone Project – Full Stack App",
             company: "InceptionU",
             role: "Full Stack Developer",
@@ -47,7 +67,7 @@ export default function Journey() {
         },
 
         {
-            id: 3,
+            id: 4,
             title: "InceptionU – Full Stack Developer Program",
             company: "InceptionU",
             role: "Full Stack Developer (Student)",
@@ -72,7 +92,7 @@ export default function Journey() {
         },
 
         {
-            id: 4,
+            id: 5,
             title: "ComIT – Web Development Foundations",
             company: "ComIT",
             role: "Web Development Trainee",
@@ -87,7 +107,7 @@ export default function Journey() {
         },
 
         {
-            id: 5,
+            id: 6,
             title: "Career Transition to IT",
             company: "Self-initiated",
             role: "Learner & Explorer",
@@ -102,7 +122,7 @@ export default function Journey() {
         },
 
         {
-            id: 6,
+            id: 7,
             title: "Transition to Canada",
             company: "Various Roles",
             role: "Sales Associate & Cashier",
@@ -117,7 +137,7 @@ export default function Journey() {
         },
 
         {
-            id: 7,
+            id: 8,
             title: "B.Sc. in Civil Engineering",
             company: "Universidade FUMEC",
             role: "Civil Engineering Graduate",
