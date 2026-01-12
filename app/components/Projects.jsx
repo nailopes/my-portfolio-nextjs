@@ -20,9 +20,8 @@ export default function Projects() {
             title: "Doughnut Hub",
             image: "/doughnut-hub.png",
             alt: "Multi-scale portraits, comparisons, practitioner guidance",
-            link: "https://github.com/EvolveU-FSD/c13-project3-team5.git",
-            description: "MVP built during my course in collaboration with DEAL to centralize Doughnut metrics and methods across local, national, and global scales. Includes custom Data Portraits, interactive Doughnut plots, and embedded guidance.",
-            disabled: true
+            link: "https://doughnut-visualiser.doughnuteconomics.org/",
+            description: "Desktop-first research MVP built during my course with DEAL to centralize Doughnut metrics and methods across local, national, and global scales. Features custom Data Portraits, interactive Doughnut plots, and embedded guidance.",
         },
         {
             title: "Linktree-style Page",
