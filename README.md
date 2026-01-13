@@ -26,12 +26,4 @@ This is my personal portfolio built with **Next.js 14**, **Tailwind CSS**, and w
 - Animated scroll + component structure
 - Downloadable resume (hire me please)
 
----
 
-## 🛠 Local Setup
-
-```bash
-git clone https://github.com/nailopes/my-portfolio-nextjs.git
-cd my-portfolio-nextjs
-npm install
-npm run dev
