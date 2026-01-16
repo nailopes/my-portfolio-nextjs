@@ -11,10 +11,11 @@ export default function About() {
             />
             <div className="max-w-md lg:max-w-lg xl:max-w-xl text-center md:text-left relative z-10">
                 <h2 className="text-3xl lg:text-4xl xl:text-5xl font-bold mb-4 text-heading">ABOUT ME</h2>
-                <p className="mb-2 text-lg lg:text-xl text-content">Building software with structure and vision</p>
-                <p className="text-teal-500 font-semibold mb-2 text-lg lg:text-xl hover:text-teal-600 hover:shadow-lg hover:rounded-lg">Full Stack Developer</p>
-                <p className="text-lg lg:text-xl text-content">Civil Engineer</p>
-                <p className="mb-4 text-lg lg:text-xl text-content">Project Manager</p>
+                <p className="mb-2 text-lg lg:text-xl text-content">From full stack to full system -- building smarter solutions</p>
+                <p className="text-teal-500 font-semibold mb-2 text-lg lg:text-xl hover:text-teal-600 hover:shadow-lg hover:rounded-lg">Technical Analyst</p>
+                <p className="text-lg lg:text-xl text-content">Full Stack Developer</p>
+                <p className="mb-4 text-lg lg:text-xl text-content">Civil Engineer</p>
+
             </div>
         </section>
     );
